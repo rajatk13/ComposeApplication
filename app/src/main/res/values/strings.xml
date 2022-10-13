@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">1Compose Application</string>
+    <string name="google_api_key">AIzaSyCer2sJ_pJbeI5HGv2pKGMNiaFPJwnylrE</string>
+    <string name="title_activity_main_sample2">Main_Sample2Activity</string>
+    <string name="title_activity_main_sample3">Main_Sample3Activity</string>
+    <string name="title_activity_work_manager_sample">WorkManagerSampleActivity</string>
+    <string name="title_activity_launched_effect">LaunchedEffectActivity</string>
+    <string name="title_activity_launched_effect_flow">LaunchedEffectFlowActivity</string>
+    <string name="title_activity_main_fifth5">MainFifth5Activity</string>
+</resources>

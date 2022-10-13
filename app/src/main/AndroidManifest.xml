@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.composeapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".NoteApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ComposeApplication"
+        tools:targetApi="31">
+
+       <!-- // color radiobutton, text, mvvm, room, next button, activit navigate-->
+        <activity
+            android:name=".fifthApp.MainFifth5Activity"
+            android:exported="true"
+            android:label="@string/title_activity_main_fifth5"
+            android:theme="@style/Theme.ComposeApplication">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- // color radio button, text, mvvm, room -->
+        <activity
+            android:name=".fourthApp.launchedEffect.LaunchedEffectActivity"
+            android:exported="true"
+            android:label="@string/title_activity_launched_effect"
+            android:theme="@style/Theme.ComposeApplication" />
+        <!-- // download photo with work manager -->
+        <activity
+            android:name=".thirdApp.worker.WorkManagerSampleActivity"
+            android:exported="true"
+            android:label="@string/title_activity_work_manager_sample"
+            android:theme="@style/Theme.ComposeApplication" />
+
+        <!-- // viewpager navhost navigation , sending arguments -->
+        <activity
+            android:name=".second_App.presentation.Main_Sample3Activity"
+            android:exported="true"
+            android:label="@string/title_activity_main_sample3"
+            android:theme="@style/Theme.ComposeApplication">
+
+            <!-- // max sample didit in this activity -->
+          <!--  <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+
+        </activity>
+        <!-- // color radio button, text, mvvm, room -->
+        <activity
+            android:name="com.app.composeapplication.firstApp.ui.feture_note.Main_Sample2Activity"
+            android:exported="true"
+            android:label="@string/title_activity_main_sample2"
+            android:theme="@style/Theme.ComposeApplication">
+          <!--  <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeApplication" />
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_api_key"/>
+    </application>
+
+</manifest>
