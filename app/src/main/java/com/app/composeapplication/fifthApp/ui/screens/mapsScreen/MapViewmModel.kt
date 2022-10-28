@@ -47,6 +47,7 @@ class MapViewmModel @Inject constructor(
                      ),
                      isTogglemap = !state.isTogglemap
                  )
+                state = state
             }
             is MapEvent.OnMapLongClick->{
                 viewModelScope.launch {

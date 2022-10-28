@@ -97,7 +97,7 @@ dependencies {
     implementation "com.google.maps.android:maps-compose:2.7.2"
 
     // Compose dependencies
-   // implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1"
+    // implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1"
     implementation 'androidx.compose.runtime:runtime-livedata:1.2.0-alpha03'
 
     //retrofit
@@ -106,7 +106,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:4.9.1'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
     //moshi
-//    implementation("com.squareup.moshi:moshi-kotlin:1.14.0")
+    // implementation("com.squareup.moshi:moshi-kotlin:1.14.0")
 
     implementation("io.coil-kt:coil-compose:2.2.1")
     implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
@@ -123,7 +123,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
     implementation 'com.google.maps.android:android-maps-utils:2.3.0'
 //    implementation "com.google.android.libraries.maps:maps:3.1.0-beta"
-   // implementation "com.google.maps.android:maps-v3-ktx:2.2.0"
+//    implementation "com.google.maps.android:maps-v3-ktx:2.2.0"
 
 
 }

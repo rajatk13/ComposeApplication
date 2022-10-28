@@ -29,8 +29,8 @@ fun  MyTransparentTextField(
     onValueChange:(String)->Unit,
     onFocusChange:(FocusState)->Unit,
     singleLine:Boolean = false,
-    keyboardOptions: KeyboardOptions,
-    keyboardActions: KeyboardActions
+    keyboardOptions: KeyboardOptions= KeyboardOptions(),
+    keyboardActions: KeyboardActions= KeyboardActions ()
 ) {
   /*  keyboardOptions = KeyboardOptions(imeAction = ImeAction.Next),
     keyboardActions = KeyboardActions(
@@ -56,7 +56,7 @@ fun  MyTransparentTextField(
 @Composable
 fun MyTranspTextField() {
     ComposeApplicationTheme {
-      //  MyTransparentTextField(text = "rajat", hint ="hhhhhh...", onValueChange = {}, onFocusChange = {}, keyboardOptions = KeyboardOptions())
+      MyTransparentTextField(text = "rajat", hint ="hhhhhhint...", onValueChange = {}, onFocusChange = {}, keyboardOptions = KeyboardOptions())
     }
 
 }

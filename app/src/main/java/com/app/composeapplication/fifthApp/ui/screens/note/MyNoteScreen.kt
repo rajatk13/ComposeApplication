@@ -15,12 +15,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.app.composeapplication.fifthApp.ui.screens.canvas.ArchComposed
 import com.app.composeapplication.fifthApp.ui.screens.note.model.MyNoteEvents
 import com.app.composeapplication.fifthApp.ui.theme.ComposeApplicationTheme
 import com.app.composeapplication.firstApp.ui.feture_note.Main_Sample2Activity
@@ -63,6 +65,11 @@ fun MyNoteScreen(
 
                     }
 
+                    /*IconButton(onClick = {
+                    //Toast.makeText(context,"$s", Toast.LENGTH_SHORT).show()
+                    }) {
+                        Icon(imageVector = Icons.Default.AreaChart, contentDescription = "AreaChart")
+                    }*/
                     IconButton(onClick = {
                         context.startActivity(Intent(context, WorkManagerSampleActivity::class.java))
                     //Toast.makeText(context,"$s", Toast.LENGTH_SHORT).show()
@@ -77,6 +84,7 @@ fun MyNoteScreen(
                         Icon(imageVector = Icons.Default.Map, contentDescription = "NavigateNext")
                     }
                 }
+
                 Toast.makeText(context,"${state.isToggled}", Toast.LENGTH_SHORT).show()
                  AnimatedVisibility(visible = state.isToggled,
                      enter = fadeIn() + slideInVertically(),
@@ -87,7 +95,13 @@ fun MyNoteScreen(
                              viewModel.event(MyNoteEvents.Order(it))}
                      )
                  }
-                  LazyColumn(modifier = Modifier.fillMaxSize()){
+
+                ArchComposed(100L*1000L, handlerColor = Color.Green,
+                    inActiveBarColor = Color.DarkGray, activeBarColor = Color.Green, modifier = Modifier.size(200.dp))
+
+
+
+                LazyColumn(modifier = Modifier.fillMaxSize()){
 
                       items(state.note){ note->
                           Spacer(modifier = Modifier.height(10.dp))
@@ -131,3 +145,4 @@ fun NotePriview() {
       //  RadioOrderButtons("",true,{})
     }
 }
+

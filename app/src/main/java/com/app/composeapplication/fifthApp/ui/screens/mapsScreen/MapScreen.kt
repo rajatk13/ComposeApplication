@@ -38,9 +38,17 @@ fun MapScreen(
     //val cameraPositionState1 =
     var properties by remember {
                    mutableStateOf(viewmModel.state.properties.copy(
-                       mapType = MapType.NORMAL
+                       mapType = viewmModel.state.properties.mapType
                    ))
     }
+    viewmModel.state = viewmModel.state.copy(
+        properties =
+        viewmModel.state.properties.copy(
+            mapStyleOptions = if(viewmModel.state.isTogglemap) null
+            else  MapStyleOptions(MapStyles.json)
+        )
+
+    )
     properties =  viewmModel.state.properties
     var circleCenter by remember { mutableStateOf(chd) }
     val scaffoldState = rememberScaffoldState()
@@ -51,6 +59,7 @@ fun MapScreen(
         scaffoldState = scaffoldState,
         floatingActionButton = {
             FloatingActionButton(onClick = {
+                properties =   viewmModel.state.properties
                 viewmModel.mapEvents(MapEvent.ToggleFallout)
             }) {
                 Icon(imageVector =
@@ -100,7 +109,7 @@ fun MapScreen(
                 properties = viewmModel.state.properties.copy(
                   mapType = it
               )
-
+                viewmModel.state.properties = properties
              //   Log.e("TAG", "MapScreen: ${viewmModel.state. properties.mapType.name}", )
               //  viewmModel.mapEvents(MapEvent.refreshFallout)
             })
